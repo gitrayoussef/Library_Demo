@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <title>Update Book</title>
+    </head>      
+    <body>
+    <div class="container mt-3 mb-5 w-50">
+        <h3 class="mb-4">Update <span class="text-danger"><%=updatedBook.title%></span> By <span class="text-danger"><%=updatedBook.authors%></span></h3>
+        <form action="/updatebook?_id=<%=updatedBook._id%>" method="POST">
+            <div class="mb-3">
+                <label for="thumbnailUrl" class="form-label">Thumbnail Image</label>
+                <input type="text" class="form-control text-secondary" id="thumbnailUrl" name="thumbnailUrl" value="<%=updatedBook.thumbnailUrl%>">
+            </div>
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control text-secondary" id="title" name="title" value="<%=updatedBook.title%>">
+            </div>
+            <div class="mb-3">
+                <label for="authors" class="form-label">Author</label>
+                <input type="text" class="form-control text-secondary" id="authors" name="authors" value="<%=updatedBook.authors%>">
+            </div>
+            <div class="mb-3">
+                <label for="categories" class="form-label">Categories</label>
+                <input type="text" class="form-control text-secondary" id="categories" name="categories" value="<%=updatedBook.categories%>">
+            </div>
+            <div class="mb-3">
+                <label for="shortDescription" class="form-label">Short Description</label>
+                <textarea class="form-control text-secondary" id="shortDescription" name="shortDescription" rows="5"><%=updatedBook.shortDescription%></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger">Submit</button> <a href="/showbooks" class="btn btn-danger">Back To Home</a>
+        </form>
+
+    </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+    </body>
+    
+    </html>
